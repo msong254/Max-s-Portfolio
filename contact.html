@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Max Song</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+          <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+  <a href="map.html">Who Am I?</a>
+  <ul class="dropdown-menu">
+    <li><a href="about.html">About Me <span class="label">– Curiosity Cave</span></a></li>
+    <li><a href="projects.html">Projects <span class="label">– Build Bay</span></a></li>
+    <li><a href="passions.html">Passions <span class="label">– Waffle Weights</span></a></li>
+    <li><a href="blog.html">Blog <span class="label">– The Stage</span></a></li>
+  </ul>
+</li>
+
+<li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <main class="contact-container">
+    <div class="contact-content">
+      <div class="contact-text">
+        <h2>Let’s Connect</h2>
+        <p>I love curious minds. Whether it's a deep dive on fitness, tech, or why breakfast is elite — I’m always up for a great convo. Drop a message and let’s chat.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="from_name" id="name" placeholder="e.g. Serena, or a cool alias" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="from_email" id="email" placeholder="e.g. you@planet.com" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Ask me about my dog, or challenge me to a tech debate." required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="status-message"></p>
+      </form>
+
+      <div class="social-links">
+        <p>Or find me here:</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/song_max_x" target="_blank" aria-label="Instagram">
+            <img src="assets/icons/instagram.png" alt="Instagram" class="social-img" />
+          </a>
+          <a href="https://www.linkedin.com/in/msong28" target="_blank" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn" class="social-img" />
+          </a>
+          <a href="https://open.spotify.com/user/40ilwo8k45437cjzttfwzul9p" target="_blank" aria-label="Spotify">
+            <img src="assets/icons/spotify.png" alt="Spotify" class="social-img" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Max Song</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("nDWO7-dSww_w5xPR5");
+    })();
+
+    const form = document.getElementById("contact-form");
+    const statusMsg = document.getElementById("status-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_ymon83h", "template_jhhi04s", this)
+        .then(() => {
+          statusMsg.innerText = "✅ Message sent! Thanks for reaching out.";
+          statusMsg.style.color = "green";
+          form.reset();
+        })
+        .catch((error) => {
+          statusMsg.innerText = "❌ Something went wrong. Please try again.";
+          statusMsg.style.color = "red";
+          console.error("EmailJS Error:", error);
+        });
+    });
+  </script>
+</body>
+</html>

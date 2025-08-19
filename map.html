@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max's Map</title>
+  <link rel="stylesheet" href="css/map.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-shape shape1"></div>
+  <div class="background-shape shape2"></div>
+  <div class="background-shape shape3"></div>
+
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+  <a href="map.html" class="active">Who Am I?</a>
+  <ul class="dropdown-menu">
+    <li><a href="about.html">About Me <span class="label">– Curiosity Cave</span></a></li>
+    <li><a href="projects.html">Projects <span class="label">– Build Bay</span></a></li>
+    <li><a href="passions.html">Passions <span class="label">– Waffle Weights</span></a></li>
+    <li><a href="blog.html">Blog <span class="label">– The Stage</span></a></li>
+  </ul>
+</li>
+
+<li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="map-title-section">
+    <h1 class="map-title">Max’s Map</h1>
+    <p class="map-subtitle">A visual journey through what defines me - hover and click!</p>
+  </section>
+
+  <main>
+    <div class="map-wrapper">
+      <div class="map-container">
+        <img src="assets/images/MapBackground.png" class="map-background" alt="Map Background" />
+        <img src="assets/images/characterbackgroundless.png" class="player" id="character" alt="Player" />
+
+        <a href="about.html" class="zone" style="top: 76%; left: 62%;" onclick="moveCharacterTo(this, event)">
+          <img src="assets/images/curiositycave.png" alt="Curiosity Cave" />
+          <div class="tooltip">Curiosity Cave: Explore what drives me & how I think.</div>
+        </a>
+        <a href="blog.html" class="zone" style="top: 66%; left: 11%;" onclick="moveCharacterTo(this, event)">
+          <img src="assets/images/thestage.png" alt="The Stage" />
+          <div class="tooltip">The Stage: Where I speak and share stories.</div>
+        </a>
+        <a href="projects.html" class="zone" style="top: 10%; left: 75%;" onclick="moveCharacterTo(this, event)">
+          <img src="assets/images/projects.png" alt="Projects" />
+          <div class="tooltip">Projects Island: My creative and technical work.</div>
+        </a>
+        <a href="passions.html" class="zone" style="top: 10%; left: 11%;" onclick="moveCharacterTo(this, event)">
+          <img src="assets/images/waffleweights.png" alt="Waffle Weights" />
+          <div class="tooltip">Waffle Weights: Where food, health, and fitness meet.</div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Max Song</p>
+  </footer>
+
+  <script>
+    function moveCharacterTo(zoneElement, event) {
+      event.preventDefault();
+
+      const character = document.getElementById('character');
+      const topPercent = parseFloat(zoneElement.style.top);
+      const leftPercent = parseFloat(zoneElement.style.left);
+
+      // Animate to position
+      character.style.top = `${topPercent + 2}%`;
+      character.style.left = `${leftPercent - 4}%`;
+      character.style.transition = 'top 0.6s ease, left 0.6s ease';
+
+      // Save position so it's remembered during this session
+      sessionStorage.setItem('characterMoved', 'true');
+
+      setTimeout(() => {
+        window.location.href = zoneElement.href;
+      }, 600);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const character = document.getElementById('character');
+
+      // If no movement was done, reset to start
+      const moved = sessionStorage.getItem('characterMoved');
+
+      if (!moved) {
+        character.style.top = '83%';
+        character.style.left = '48%';
+      }
+
+      // Clear saved state so next visit resets again
+      sessionStorage.removeItem('characterMoved');
+    });
+  </script>
+</body>
+</html>

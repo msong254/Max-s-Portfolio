@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #faf3e0, #f9e6c1);
+  color: #2a2a2a;
+}
+
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.about-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+
+.about-subtitle {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 4rem;
+}
+
+/* Section layout */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-text h2 {
+  font-size: 1.6rem;
+  color: #d9822b;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  width: 250px;
+  min-width: 180px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Quote styling */
+.about-quote {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  background: #f7f3ed;
+  padding: 2rem;
+  border-left: 4px solid #d9822b;
+  border-radius: 12px;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.about-quote span {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  font-style: normal;
+  color: #555;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section.reverse {
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}

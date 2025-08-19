@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f1ec;
+  color: #2a2a2a;
+  min-height: 100vh;
+}
+
+/* === Navbar === */
+nav {
+  background: #ebe6df;
+  padding: 1rem 0;
+  border-bottom: 1px solid #d9822b;
+  position: relative;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: #2a2a2a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  transition: all 0.25s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #d9822b;
+  border-bottom: 2px solid #d9822b;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fffdf9;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 260px;
+  z-index: 1000;
+  gap: 0.6rem;
+}
+
+.dropdown-menu a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2a2a2a;
+  border-bottom: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  text-align: left;
+  padding: 0.2rem 0;
+}
+
+.dropdown-menu a:hover {
+  color: #d9822b;
+}
+
+.label {
+  font-style: italic;
+  font-weight: 400;
+  color: #777;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+}
+
+/* === Hero === */
+.hero-banner-style {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../assets/images/MaxHeroShot.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.6);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Headshot === */
+.headshot-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #d9822b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.headshot-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Heading and quote === */
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.8s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #fdfaf6;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.personal-quote {
+  font-size: 1rem;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #d9822b;
+  border-radius: 12px;
+  color: #f4f1ec;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.quote-label {
+  font-weight: bold;
+  color: #f7c27a;
+  font-style: normal;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* === Buttons === */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn {
+  background-color: #d9822b;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #c7662d;
+}
+
+.secondary-btn {
+  background-color: #fff;
+  color: #2a2a2a;
+  border: 2px solid #4d7c59;
+}
+
+.secondary-btn:hover {
+  background-color: #4d7c59;
+  color: #fff;
+}
+
+/* === Footer === */
+footer {
+  background: #ebe6df;
+  color: #555;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-top: 1px solid #d9822b;
+}

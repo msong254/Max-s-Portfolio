@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #faf3e0, #f9e6c1);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* === Navbar Container === */
+nav {
+    background: #ebe6df;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d9822b;
+    position: relative;
+    z-index: 999;
+  }
+  
+  /* === Navbar List === */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* === Navbar List Items === */
+  nav li {
+    position: relative;
+  }
+  
+  /* === Navbar Links === */
+  nav a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    transition: all 0.25s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  /* === Hover and Active State === */
+  nav a:hover,
+  nav a.active {
+    color: #d9822b;
+    border-bottom: 2px solid #d9822b;
+  }
+  
+  /* === Dropdown Interaction === */
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  
+  /* === Dropdown Menu Container === */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #fffdf9;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 260px;
+    z-index: 1000;
+    gap: 0.6rem;
+  }
+  
+  /* === Dropdown Menu Links === */
+  .dropdown-menu a {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2a2a2a;
+    border-bottom: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+    text-align: left;
+    padding: 0.2rem 0;
+  }
+  
+  /* === Hover State for Dropdown Items === */
+  .dropdown-menu a:hover {
+    color: #d9822b;
+  }
+  
+  /* === Sub-label Styling === */
+  .label {
+    font-style: italic;
+    font-weight: 400;
+    color: #777;
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+  }
+  
+  .map-title-section {
+    text-align: center;
+    padding: 2.5rem 1rem 0;
+  }
+  .map-title {
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #d9822b;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  .map-subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4d7c59;
+    letter-spacing: 0.4px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .map-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .map-container {
+    position: relative;
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 720px;
+    max-height: 720px;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .map-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .player {
+    position: absolute;
+    width: 90px;
+    top: 83%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: top 0.6s ease, left 0.6s ease;
+  }
+  
+  .zone {
+    position: absolute;
+    width: 90px;
+    z-index: 5;
+    transition: transform 0.2s ease;
+  }
+  .zone:hover {
+    transform: scale(1.1);
+    z-index: 6;
+  }
+  .zone img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #2a2a2a;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #d9822b;
+    text-align: center;
+    z-index: 99;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .zone:hover .tooltip {
+    display: block;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #d9822b transparent transparent transparent;
+  }
+  
+  footer {
+    background: #ebe6df;
+    color: #555;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #d9822b;
+  }
+
+  /* Floating background shapes */
+.background-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    z-index: 0;
+    animation: float 8s ease-in-out infinite alternate;
+  }
+  
+  .shape1 {
+    width: 200px;
+    height: 200px;
+    background: #d9822b;
+    top: 10%;
+    left: -80px;
+  }
+  
+  .shape2 {
+    width: 300px;
+    height: 300px;
+    background: #4d7c59;
+    bottom: 5%;
+    right: -100px;
+  }
+  
+  .shape3 {
+    width: 150px;
+    height: 150px;
+    background: #d9822b;
+    top: 60%;
+    left: 40%;
+  }
+  
+  @keyframes float {
+    from {
+      transform: translateY(0) rotate(0deg);
+    }
+    to {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }

@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf9;
+    color: #2a2a2a;
+  }
+  
+  nav {
+    background: #ebe6df;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d9822b;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: #d9822b;
+    border-bottom: 2px solid #d9822b;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #fffdf9;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  
+  .label {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+  }
+  
+  .blog-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  .blog-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 3rem;
+    color: #2a2a2a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 3rem;
+  }
+  
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .blog-post {
+    background: #f7f3ed;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+  }
+  
+  .post-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #d9822b;
+  }
+  
+  .post-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+  
+  .post-preview {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    color: #4d7c59;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background: #ebe6df;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+    border-top: 1px solid #d9822b;
+  }

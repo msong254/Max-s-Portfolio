@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passions | Max Song</title>
+  <link rel="stylesheet" href="css/passions.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="map.html">Who Am I?</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About Me <span class="label">– Curiosity Cave</span></a></li>
+            <li><a href="projects.html">Projects <span class="label">– Build Bay</span></a></li>
+            <li><a href="passions.html" class="active">Passions <span class="label">– Waffle Weights</span></a></li>
+            <li><a href="blog.html">Blog <span class="label">– The Stage</span></a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="passions-container">
+    <h1 class="passions-title">Waffle Weights 🧇</h1>
+    <p class="passions-subtitle">My obsessions, interests, and rabbit holes I can’t stop talking about.</p>
+
+    <div class="grid">
+      <div class="passion-card">
+        <img src="assets/images/IMG_9155 3.jpg" alt="Exercise">
+        <h2>Exercise</h2>
+        <p>I love pushing my physical limits and exploring how the body adapts.</p>
+        <button class="toggle-btn">Read more</button>
+        <div class="dropdown-text">
+          <p>I didn’t fall in love with fitness through running — even though my whole family did. They were always logging miles, but I could never find the same passion for it. I preferred sports, some movement with purpose. Basketball, swimming, badminton — anything with a goal, competition, or skill to chase.
+            <br>
+            <br>
+            But then I found weightlifting. No opponents, no scoreboard — just me and the weights. I got hooked on the feeling of getting stronger, chasing little progressions, and learning how the body works. What started as “just working out” turned into a full-on obsession with science: training, nutrition, injury prevention, recovery. I started researching things not just for me, but to help the people around me feel and live better.
+            <br>
+            <br>
+            At some point, I realized I want to take it further — not for clout or a medal, but to prove something to myself. So eventually, I plan to compete in a classic physique competition. Just standing on that stage would be the win.
+       </p>
+        </div>
+      </div>
+
+      <div class="passion-card">
+        <img src="assets/images/IMG_9160.jpg" alt="Nutrition">
+        <h2>Nutrition</h2>
+        <p>Food is the Foundation</p>
+        <button class="toggle-btn">Read more</button>
+        <div class="dropdown-text">
+          <p>I’ve always loved food, not just for the flavor, but for the way it brings people together. Growing up, my mom cooked nearly every meal, and the kitchen naturally became the heart of our home. Food was how we connected, how we celebrated, and how we paused in a busy day. Conversations happened over meals. Life revolved around what and when we ate.
+                <br>
+                <br>
+            As my weight fluctuated over time, I started to look at food differently. I learned how to adapt recipes I loved into healthier versions, and that led me down a path of curiosity and research. What started with small changes turned into something deeper: tracking micronutrients, running blood tests, and watching how my lifestyle choices showed up in real data.
+                <br>
+                <br>
+            Today, I see food as a blend of culture, care, and science. I don’t think health and enjoyment need to be at odds. With a little understanding, food can nourish both the body and the people around you.</p>
+        </div>
+      </div>
+
+      <div class="passion-card">
+        <img src="assets/images/Screenshot 2025-08-04 at 10.56.27 AM.png" alt="Politics">
+        <h2>Politics</h2>
+        <p>I value challenging my beliefs and learning from others.</p>
+        <button class="toggle-btn">Read more</button>
+        <div class="dropdown-text">
+          <p>For a long time, I avoided politics. I saw how it tore through relationships — how one disagreement could turn into silence at the dinner table or tension in a group chat. So I kept my distance. That changed after a debate with one of my teachers about taxation. I disagreed with him, spoke up, and got absolutely dismantled. But instead of shutting down, I got curious. I started researching, reading, and asking better questions.
+                <br>
+                <br>
+            That experience flipped a switch for me. I realized that politics isn’t just about policy — it’s about people, perspectives, and how we interpret the same set of facts in completely different ways. That tension isn’t a flaw; it’s the point. The best political conversations are balancing acts — where every voice, every challenge, helps refine the idea. Now, I love talking about politics. Not to argue, but to learn, listen, and sharpen my own views.</p>
+        </div>
+      </div>
+
+      <div class="passion-card">
+        <img src="assets/images/Screenshot 2025-08-04 at 10.52.58 AM.png" alt="Movies and Shows">
+        <h2>Movies / Shows</h2>
+        <p>Visual storytelling is one of the most powerful mediums.</p>
+        <button class="toggle-btn">Read more</button>
+        <div class="dropdown-text">
+          <p>Some people say books are better than movies because they leave more room for imagination. I’ve never agreed with that. To me, a great movie doesn’t take imagination away — it just handles the surface for you, like what a character looks or sounds like. That frees up space to focus on the layers underneath: emotion, direction, sound, and meaning. I love how a single scene, when done right, can hit you with the creator’s intent and still leave room for your own interpretation.
+                <br>
+                <br>
+            I’m drawn to stories that linger — ones that challenge me or shift how I see things. Shows like The Good Place, House M.D., and The Walking Dead stuck with me because they blend philosophy with emotion. Movies like The Truman Show or Forrest Gump do the same, asking questions that stay long after the credits roll. For me, film isn’t just entertainment. It’s a mirror, a conversation, and sometimes, a quiet answer to a question I didn’t know I was asking.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Max Song</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".toggle-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "Read less" : "Read more";
+      });
+    });
+  </script>
+</body>
+</html>

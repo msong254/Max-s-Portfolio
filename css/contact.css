@@ -1,0 +1,212 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f4f1ec;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 540px;
+    width: 100%;
+  }
+  
+  .contact-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-text h2 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #d9822b;
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-text p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  
+  .contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2a2a2a;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fdfaf6;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #d9822b;
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: #d9822b;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #c7662d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(217, 130, 43, 0.3);
+  }
+  
+  #status-message {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .social-links {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .social-links p {
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+    color: #4d7c59;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-img:hover {
+    transform: scale(1.2);
+  }
+
+/* === Navbar Container === */
+nav {
+    background: #ebe6df;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d9822b;
+    position: relative;
+    z-index: 999;
+  }
+  
+  /* === Navbar List === */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* === Navbar List Items === */
+  nav li {
+    position: relative;
+  }
+  
+  /* === Navbar Links === */
+  nav a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    transition: all 0.25s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  /* === Hover and Active State === */
+  nav a:hover,
+  nav a.active {
+    color: #d9822b;
+    border-bottom: 2px solid #d9822b;
+  }
+  
+  /* === Dropdown Interaction === */
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  
+  /* === Dropdown Menu Container === */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #fffdf9;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 260px;
+    z-index: 1000;
+    gap: 0.6rem;
+  }
+  
+  /* === Dropdown Menu Links === */
+  .dropdown-menu a {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2a2a2a;
+    border-bottom: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+    text-align: left;
+    padding: 0.2rem 0;
+  }
+  
+  /* === Hover State for Dropdown Items === */
+  .dropdown-menu a:hover {
+    color: #d9822b;
+  }
+  
+  /* === Sub-label Styling === */
+  .label {
+    font-style: italic;
+    font-weight: 400;
+    color: #777;
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+  }
